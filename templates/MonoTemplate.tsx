@@ -27,7 +27,7 @@ export default function MonoTemplate({ data: d, settings: s }: P) {
             <span style={{ color: '#666', fontSize: 8 }}>{dateRange(e.startDate, e.endDate, e.current)}</span>
           </div>
           {e.description && <p style={{ margin: '2px 0', color: '#444', fontSize: 8.5 }}>{e.description}</p>}
-          {e.achievements?.map((a, i) => <p key={i} style={{ margin: '0 0 1px', color: '#444', fontSize: 8 }}>  > {a}</p>)}
+          {e.achievements?.map((a, i) => <p key={i} style={{ margin: '0 0 1px', color: '#444', fontSize: 8 }}>  &gt; {a}</p>)}
         </div>)}
         <div style={{ borderBottom: '1px solid #ccc', marginBottom: 12 }} /></>}
 
