@@ -120,11 +120,11 @@ export default function App() {
   // Whenever data/template/settings change, save back to the active project
   useEffect(() => {
     if (!activeId) return
-    const proj = projects.find(p => p.id === activeId)
+    const proj = projectStorage.getAll().find(p => p.id === activeId)
     if (!proj) return
     const updated: ResumeProject = { ...proj, data, templateId, settings, updatedAt: Date.now() }
     autoSave(updated)
-  }, [data, templateId, settings])
+  }, [activeId, autoSave, data, templateId, settings])
 
   // ── Toast ─────────────────────────────────────────────────────────────────
   const toast = useCallback((msg: string, type: 'success' | 'error' = 'success') => {

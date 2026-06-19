@@ -143,8 +143,9 @@ export default function CustomBoxLayer({ boxes, onChange, containerWidth, contai
     setEditingId(b.id)
   }
 
-  const update = (id: string, patch: Partial<CustomBox>) =>
+  const update = useCallback((id: string, patch: Partial<CustomBox>) => {
     onChange(boxes.map(b => b.id === id ? { ...b, ...patch } : b))
+  }, [boxes, onChange])
 
   const remove = (id: string) => {
     onChange(boxes.filter(b => b.id !== id))
@@ -166,7 +167,7 @@ export default function CustomBoxLayer({ boxes, onChange, containerWidth, contai
       x: Math.max(0, Math.min(95, dragging.origX + dx)),
       y: Math.max(0, Math.min(95, dragging.origY + dy)),
     })
-  }, [dragging, containerWidth, containerHeight])
+  }, [dragging, containerWidth, containerHeight, update])
 
   const onMouseUp = () => setDragging(null)
 

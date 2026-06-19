@@ -88,6 +88,10 @@ const TIERS = [
   },
 ]
 
+const CASH_APP_URL = 'https://cash.app/$CoComStudios'
+const CASH_APP_TAG = '$CoComStudios'
+const BTC_WALLET = 'bc1qsec03m5kyeu3nnsyzjek0djmcxdggcq673myrl'
+
 export default function PricingPage() {
   const [hoveredTier, setHoveredTier] = useState<string | null>(null)
 
@@ -227,7 +231,7 @@ export default function PricingPage() {
               { q: 'Do you store my resume data?', a: 'No. Everything stays in your browser (localStorage). We have no server-side database of your information.' },
               { q: 'When does Pro launch?', a: "We're working on it. Drop your email in the feedback form and we'll notify you when it's ready." },
               { q: 'Can I use this commercially?', a: 'Yes — you own your resume. Use it anywhere, send it to anyone.' },
-              { q: 'What payment methods will you accept?', a: 'We plan to support card payments via Stripe and potentially Cash App Pay.' },
+              { q: 'What payment methods do you accept?', a: 'For now, payments are manually verified through Cash App or Bitcoin. Include your email in the Cash App note, or send your Bitcoin transaction ID through the builder feedback button.' },
               { q: 'Will Pro templates get watermarks on free?', a: "Pro templates will show a locked preview on Free. Your free templates always export clean — no watermarks, no strings." },
             ].map((item, i) => (
               <div key={i} className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-5">
@@ -239,17 +243,31 @@ export default function PricingPage() {
         </div>
 
         {/* Support CTA */}
-        <div className="text-center bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-8">
+        <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-8">
           <Coffee size={28} className="text-yellow-500 mx-auto mb-3" />
-          <h3 className="font-black text-gray-900 dark:text-white text-xl mb-2">Enjoying RapidResumes?</h3>
-          <p className="text-gray-500 dark:text-gray-400 text-sm mb-5 max-w-sm mx-auto">
-            This is a solo-built free tool. If it helped you land an interview, a tip means the world.
+          <h3 className="font-black text-gray-900 dark:text-white text-xl mb-2 text-center">Enjoying RapidResumes?</h3>
+          <p className="text-gray-500 dark:text-gray-400 text-sm mb-6 max-w-xl mx-auto text-center">
+            This is a solo-built free tool. Tips are optional. Paid upgrades are manually delivered after payment is verified.
           </p>
-          <a href="https://cash.app/$CoComStudios" target="_blank" rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold px-6 py-3 rounded-xl transition-all active:scale-95">
-            <Coffee size={16} /> Tip on Cash App · $CoComStudios
-          </a>
-          <p className="text-xs text-gray-400 mt-3">100% optional. Deeply appreciated.</p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto mb-5">
+            <div className="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-950 p-4">
+              <p className="text-xs font-bold uppercase tracking-wide text-gray-400 mb-2">Cash App</p>
+              <a href={CASH_APP_URL} target="_blank" rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold px-4 py-2.5 rounded-xl transition-all active:scale-95">
+                <Coffee size={16} /> Pay {CASH_APP_TAG}
+              </a>
+            </div>
+
+            <div className="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-950 p-4">
+              <p className="text-xs font-bold uppercase tracking-wide text-gray-400 mb-2">Bitcoin</p>
+              <p className="text-xs text-gray-600 dark:text-gray-300 break-all font-mono">{BTC_WALLET}</p>
+            </div>
+          </div>
+
+          <p className="text-xs text-gray-400 text-center max-w-2xl mx-auto">
+            Include your email in the Cash App note. For Bitcoin, use the builder feedback button and include your transaction ID plus the email you want access delivered to. Crypto payments are final and manual verification may take time.
+          </p>
         </div>
       </div>
     </div>

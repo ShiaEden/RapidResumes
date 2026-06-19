@@ -1,0 +1,191 @@
+{
+  "data": {
+    "personal": {
+      "name": "Jordan Taylor",
+      "title": "Full Stack Developer",
+      "email": "jordan.taylor@example.com",
+      "phone": "(555) 123-4567",
+      "location": "Austin, TX",
+      "website": "https://jordantaylor.dev",
+      "linkedin": "https://linkedin.com/in/jordantaylor",
+      "github": "https://github.com/jordantaylor",
+      "twitter": "https://x.com/jordantaylor",
+      "summary": "Full stack developer with 5+ years of experience building fast, accessible web apps with React, Next.js, TypeScript, Node.js, and cloud platforms. Strong track record of shipping polished products, improving performance, and turning ambiguous business needs into reliable user experiences."
+    },
+    "customLinks": [
+      {
+        "id": "link_portfolio",
+        "label": "Portfolio",
+        "url": "https://jordantaylor.dev"
+      },
+      {
+        "id": "link_calendly",
+        "label": "Book a call",
+        "url": "https://calendly.com/jordantaylor"
+      }
+    ],
+    "experience": [
+      {
+        "id": "exp_1",
+        "company": "Northstar Labs",
+        "role": "Senior Frontend Engineer",
+        "startDate": "2023-02",
+        "endDate": "",
+        "current": true,
+        "description": "Lead frontend development for a B2B analytics platform used by operations teams to monitor revenue, onboarding, and retention metrics.",
+        "achievements": [
+          "Reduced dashboard load time by 42% by splitting heavy routes, optimizing data fetching, and removing unused client bundles.",
+          "Built a reusable component system with TypeScript, Tailwind CSS, and Storybook that cut new feature UI work by roughly 30%.",
+          "Partnered with product and design to launch self-serve reporting tools used by 2,000+ weekly active users."
+        ]
+      },
+      {
+        "id": "exp_2",
+        "company": "BrightPath Software",
+        "role": "Full Stack Developer",
+        "startDate": "2020-06",
+        "endDate": "2023-01",
+        "current": false,
+        "description": "Built customer-facing web applications, internal admin tools, and API integrations for a SaaS workflow automation product.",
+        "achievements": [
+          "Created a Next.js onboarding flow that increased trial activation by 18%.",
+          "Designed REST API endpoints in Node.js and PostgreSQL for billing, permissions, and document workflows.",
+          "Improved test coverage across critical checkout and account flows with Playwright and Jest."
+        ]
+      },
+      {
+        "id": "exp_3",
+        "company": "Freelance",
+        "role": "Web Developer",
+        "startDate": "2018-09",
+        "endDate": "2020-05",
+        "current": false,
+        "description": "Delivered websites and small business tools for local service providers, creators, and online stores.",
+        "achievements": [
+          "Launched 12 responsive marketing sites with SEO basics, analytics, and contact form automation.",
+          "Helped clients migrate from legacy page builders to modern React and static site workflows."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "id": "edu_1",
+        "institution": "University of Texas at Austin",
+        "degree": "Bachelor of Science",
+        "field": "Computer Science",
+        "startDate": "2014-08",
+        "endDate": "2018-05",
+        "gpa": "3.7",
+        "honors": "Dean's List, Capstone Excellence Award"
+      }
+    ],
+    "skills": [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "Node.js",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "REST APIs",
+      "GraphQL",
+      "Playwright",
+      "Jest",
+      "Vercel",
+      "AWS",
+      "Git",
+      "Accessibility",
+      "Performance Optimization"
+    ],
+    "projects": [
+      {
+        "id": "proj_1",
+        "name": "ResumeForge",
+        "description": "Open-source resume builder with live preview, JSON import/export, and PDF generation.",
+        "tech": "Next.js, TypeScript, Tailwind CSS, jsPDF",
+        "link": "https://github.com/jordantaylor/resumeforge"
+      },
+      {
+        "id": "proj_2",
+        "name": "MetricPulse",
+        "description": "Analytics dashboard that combines product, revenue, and support metrics into one executive view.",
+        "tech": "React, Node.js, PostgreSQL, Redis",
+        "link": "https://metricpulse.example.com"
+      },
+      {
+        "id": "proj_3",
+        "name": "LocalLaunch Kit",
+        "description": "Reusable starter kit for small business landing pages with CMS-ready sections and contact automation.",
+        "tech": "Astro, React, Tailwind CSS",
+        "link": "https://locallaunch.example.com"
+      }
+    ],
+    "achievements": [
+      {
+        "id": "ach_1",
+        "title": "Employee Impact Award",
+        "issuer": "Northstar Labs",
+        "date": "2025-11",
+        "description": "Recognized for leading the frontend performance initiative that improved customer retention signals."
+      },
+      {
+        "id": "ach_2",
+        "title": "Top 10 Hackathon Finalist",
+        "issuer": "Austin Dev Week",
+        "date": "2024-04",
+        "description": "Built a prototype AI support triage tool in 48 hours with a four-person team."
+      }
+    ],
+    "certifications": [
+      {
+        "id": "cert_1",
+        "name": "AWS Certified Cloud Practitioner",
+        "issuer": "Amazon Web Services",
+        "date": "2024-08",
+        "credentialId": "AWS-CCP-123456",
+        "link": "https://aws.amazon.com/certification/"
+      },
+      {
+        "id": "cert_2",
+        "name": "Professional Scrum Master I",
+        "issuer": "Scrum.org",
+        "date": "2023-03",
+        "credentialId": "PSM-I-987654",
+        "link": "https://www.scrum.org/"
+      }
+    ],
+    "volunteer": [
+      {
+        "id": "vol_1",
+        "organization": "Code for Austin",
+        "role": "Volunteer Developer",
+        "startDate": "2022-01",
+        "endDate": "",
+        "current": true,
+        "description": "Help maintain civic technology projects, review pull requests, and mentor new contributors."
+      }
+    ],
+    "languages": [
+      {
+        "id": "lang_1",
+        "language": "English",
+        "proficiency": "Native"
+      },
+      {
+        "id": "lang_2",
+        "language": "Spanish",
+        "proficiency": "Intermediate"
+      }
+    ]
+  },
+  "templateId": "classic",
+  "settings": {
+    "showEmojis": false,
+    "paperSize": "letter",
+    "scale": 1,
+    "offsetX": 0,
+    "offsetY": 0,
+    "accentColor": "#2563eb",
+    "fontFamily": "Helvetica"
+  }
+}
